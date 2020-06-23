@@ -16,6 +16,8 @@
     <%= text_field_tag "title", @post.title %>
   </div>
 
+  <div class="field ' field_with_errors' if @post.errors[:category].any? %>">
+
   <div class="field ' field_with_errors' if @post.errors[:content].any? %>">
     <%= label_tag "content", "Content" %>
     <%= text_area_tag "content", @post.content %>
